@@ -21,7 +21,7 @@ const Attendance = () => {
   useEffect(() => {
     const fetchRecords = async () => {
       try {
-        const response = await Axios.get('http://localhost:3015/getting');
+        const response = await Axios.get('http://localhost:3016/getting');
         setEmployees(response.data.attendance);
       } catch (error) {
         console.error('Error fetching data:', error);
