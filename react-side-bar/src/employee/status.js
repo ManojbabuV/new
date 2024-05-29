@@ -1,29 +1,3 @@
-// // src/components/StatsCards.js
-// import React from 'react';
-// import './status.css';
-
-// const StatsCards = () => {
-//   const stats = [
-//     { title: 'Total Employees', count: 80 },
-//     { title: 'New Employees', count: 14 },
-//     { title: 'Male', count: 50 },
-//     { title: 'Female', count: 30 },
-//   ];
-
-//   return (
-//     <div className="stats-cards">
-//       {stats.map((stat, index) => (
-//         <div key={index} className="card">
-//           <h2>{stat.title}</h2>
-//           <p>{stat.count}</p>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default StatsCards;
-
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -40,7 +14,7 @@ const Status = () => {
   useEffect(() => {
     async function fetchTotalCount() {
       try {
-        const response = await axios.get('http://localhost:3015/count');
+        const response = await axios.get('http://localhost:3016/count');
         setTotalCount(response.data.count); 
         setComments(response.data.comments);  
         console.log("TotalCount: ","Data has been display the total employee");
@@ -54,7 +28,7 @@ const Status = () => {
   useEffect(() => {
     async function fetchCount() {
       try {
-        const response = await axios.get('http://localhost:3015/countemployees');
+        const response = await axios.get('http://localhost:3016/countemployees');
         setMaleCount(response.data.maleCount);
         setGender(response.data.gender);
         console.log("MaleCount:", response.data.count); // Log the updated value
@@ -68,7 +42,7 @@ const Status = () => {
   useEffect(() => {
     async function fetchCount() {
       try {
-        const response = await axios.get('http://localhost:3015/femaleCount');
+        const response = await axios.get('http://localhost:3016/femaleCount');
         setFemaleCount(response.data.femaleCount);
         setFGender(response.data.fgender);
         console.log("femaleCount:", response.data.femaleCount);
