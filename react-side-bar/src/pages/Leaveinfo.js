@@ -122,7 +122,7 @@ const Leaveinfo = () => {
   useEffect(() => {
     const fetchRecords = async () => {
       try {
-        const response = await Axios.get('http://localhost:3015/getRecords');
+        const response = await Axios.get('http://localhost:3016/getRecords');
         setEmployees(response.data.employees); // Ensure the backend sends data in this format
       } catch (error) {
         console.error('Error fetching data:', error);
