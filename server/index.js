@@ -228,7 +228,7 @@ app.use(express.json());
 app.use(cors());
 
 const corsOptions = {
-  origin: ['http://localhost:3000', 'http://localhost:3015'],
+  origin: ['http://localhost:3000', 'http://localhost:3016'],
   credentials: true,
 };
 app.use(cors(corsOptions));
@@ -579,7 +579,7 @@ app.get('/femaleCount', async (_req, res) => {
 
 
    
-const PORT =  3015; 
+const PORT =  3016; 
 app.listen(PORT, async () => {
   try {
     await connectDB();
